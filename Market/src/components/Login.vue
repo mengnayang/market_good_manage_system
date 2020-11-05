@@ -71,8 +71,8 @@
                     //console.log(valid)
                     if (!valid) return;
                     let data = {
-                            staffPhone:this.loginForm.staffPhone,
-                            staffPassword:this.loginForm.staffPassword
+                        staffPhone:this.loginForm.staffPhone,
+                        staffPassword:this.loginForm.staffPassword
                     }
                     this.$http.post("login",this.$qs.stringify(data))
                     .then((res) => {

@@ -25,14 +25,14 @@
                 <div class="toggle-button" @click="toggleCollapse">|||</div>
                 <!-- 菜单区 -->
                 <el-menu :unique-opened="true" :collapse="isCollapse" :collapse-transition="false" background-color="#ffffff" text-color="#000000" 
-                        active-text-color="#0F59A4">
+                        active-text-color="#0F59A4" :router="true">
                     <el-submenu index="1">
                         <template slot="title">
                             <i class="el-icon-location"></i>
                             <span>库存管理</span>
                         </template>
                         <el-menu-item-group>
-                            <el-menu-item index="1-1">查库存</el-menu-item>
+                            <el-menu-item index="users">查库存</el-menu-item>
                             <el-menu-item index="1-2">订单信息</el-menu-item>
                             <el-menu-item index="1-3">采购入库单</el-menu-item>
                         </el-menu-item-group>
@@ -43,7 +43,7 @@
                             <span>销售管理</span>
                         </template>
                         <el-menu-item-group>
-                            <el-menu-item index="2-1">零售管理</el-menu-item>
+                            <el-menu-item index="right">零售管理</el-menu-item>
                             <el-menu-item index="2-2">批发管理</el-menu-item>
                         </el-menu-item-group>
                     </el-submenu>

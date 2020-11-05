@@ -77,13 +77,17 @@
             //注册新用户
             submit(){
                 console.log(this.RegisterForm)
-                let data = {
-                    staffName:this.RegisterForm.staffName,
-                    staffPassword:this.RegisterForm.staffPassword,
-                    staffPhone:this.RegisterForm.staffPhone
+
+                let staff = {
+                        staffName:this.RegisterForm.staffName,
+                        staffPassword:this.RegisterForm.staffPassword,
+                        staffPhone:this.RegisterForm.staffPhone
                 }
-                console.log(data)
-                this.$http.post('insert',this.$qs.stringify(data))
+                let data = {
+                    staff:JSON.stringify(staff)
+                }
+
+                this.$http.post('insert', this.$qs.stringify(data))
                 .then((res) => {
                     console.log(res)
                     let success = res.data.success

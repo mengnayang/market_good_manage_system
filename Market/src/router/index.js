@@ -2,8 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '../components/Login'
 import Home from '../components/Home'
-import Welcome from "../components/Welcome";
-import Register from "../components/Register";
+import Welcome from "../components/Welcome"
+import Register from "../components/Register"
+import Users from "../components/user/Users"
+import Right from "../components/right/Right"
 
 Vue.use(Router)
 
@@ -25,6 +27,14 @@ const router = new Router({
         {
           path:'/welcome',
           component:Welcome
+        },
+        {
+          path:'/users',
+          component:Users
+        },
+        {
+          path:'/right',
+          component:Right
         }
       ]
     },
