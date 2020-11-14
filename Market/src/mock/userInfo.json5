@@ -1,0 +1,8 @@
+{
+    "id":"@id()",   //随机数id
+    "username":"@cname()",  //随机数姓名
+    "date":"@date()",  //随机数日期
+    "description":"@paragraph()",
+    "ip":"@ip()",
+    "email":"@email()"
+}

@@ -37,6 +37,15 @@
 <script>
     export default{
         name:'Login',
+        mounted(){
+            this.$http.get('user/userInfo')
+            .then((res)=>{
+                console.log(res)
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+        },
         data(){
             return{
                 //登陆表单的信息

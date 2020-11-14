@@ -18,6 +18,16 @@ axios.defaults.baseURL = 'http://127.0.0.1:8080/staff/'
 //需要转换成表单类型的配置，否则后端接受为空
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 //axios.defaults.headers.post['Content-Type'] = 'application/json';
+axios.defaults.headers.get["Access-Control-Allow-Origin"] = "*";
+axios.defaults.headers.get['Access-Control-Allow-Headers'] = 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild';
+axios.defaults.headers.get["Access-Control-Allow-Methods"] = "PUT,POST,GET,DELETE,OPTIONS";
+axios.defaults.headers.get["X-Powered-By"] = '3.2.1';
+axios.defaults.headers.get["Content-Type"] = "application/json;charset=utf-8";
+axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
+axios.defaults.headers.post['Access-Control-Allow-Headers'] = 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild';
+axios.defaults.headers.post["Access-Control-Allow-Methods"] = "PUT,POST,GET,DELETE,OPTIONS";
+axios.defaults.headers.post["X-Powered-By"] = '3.2.1';
+axios.defaults.headers.post["Content-Type"] = "application/json;charset=utf-8";
 axios.interceptors.request.use(config => {
   //console.log(config)
   config.headers.Authorization = window.sessionStorage.getItem("token")
